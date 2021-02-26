@@ -27,7 +27,7 @@ body {
 
 .navbar-section {
     width: 100%;
-    position: fixed;
+    position: absolute;
     z-index: 10;
     top: 2.5rem;
 }
@@ -75,6 +75,7 @@ a:active {
     background-size: cover;    
     background-color: #231239;
     position: relative;
+    height: 100vh;
 }
 
 .background-title {
@@ -110,8 +111,8 @@ a:active {
 .review {
     background: #fff;
     margin: 0;
-    height: 21rem;    
-    border-radius: 0.2rem;
+    height: 100%;    
+    border-radius: 0.2rem;    
 }
 
 .review-title {
@@ -138,7 +139,53 @@ a:active {
     background-position: center;
     background-size: cover;
     height: 1rem;
-    width: 8rem;  
+    width: 8rem;      
+}
+
+.rewards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+}
+
+.card-image {
+    background: url('../assets/credit-card.svg');
+    background-position: center;
+    background-size: cover;
+    width: 204px; 
+    height: 129px; 
+    margin: 2.5rem 0rem 0 3rem;
+}
+
+.card-status {
+    text-align: center;
+    margin-left: 1.5rem;
+}
+
+.card-status-title {
+    display: none;
+}
+
+.badge {
+    margin-top: 0.5rem;
+    color: #fff;
+    background-color: #59D8D1;
+    border-radius: 1rem;
+    padding: 0.3rem 1rem;
+}
+
+.bonuses-list {
+    margin: 0 3rem;
+}
+
+.bonus {
+    margin: 1.5rem 1rem;
+    font-weight: 600;
 }
 
 /*DETAIL SECTION*/
@@ -146,6 +193,16 @@ a:active {
 
 /*------------------------*/
 /*Media queries*/
+
+@media (min-width: 59rem) {
+    .rewards {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .card-status-title {
+        display: block;
+    }
+}
 
 @media (min-width: 54rem) {
     .review-title_title {        
@@ -167,6 +224,10 @@ a:active {
 
     .background-title {
         font-size: 5rem;
+    }
+
+    .background {
+        height: 100%;
     }
 
     .detail-title {
