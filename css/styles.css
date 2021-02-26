@@ -1,8 +1,15 @@
+@font-face { 
+    font-family: 'MyWebFont'; 
+    src: url('../fonts/proximanova-reg-webfont.woff'); 
+    src: url('../fonts/proximanova-reg-webfont.woff?#iefix') format('embedded-opentype'), 
+    url('../fonts/proximanova-reg-webfont.woff') format('woff')    
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: proxima_novalight;
+    font-family: MyWebFont;
 }
 
 html,
@@ -80,10 +87,35 @@ a:active {
 /*BACKGROUND*/
 /*---------------------*/
 
+/*------------------------*/
+/*DETAIL SECTION*/
+
 .detail {
-    background: green;
+    background: #F1F5F8;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
+.detail-title { 
+    margin: 1.5rem 1rem;
+}
+
+.detail-title_title {
+    color: #373737;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.review {
+    background: #fff;
+    margin: 0;
+    height: 21rem;    
+    border-radius: 0.2rem;
+}
+
+/*DETAIL SECTION*/
+/*------------------------*/
 
 /*------------------------*/
 /*Media queries*/
@@ -95,5 +127,17 @@ a:active {
 
     .background-title {
         font-size: 5rem;
+    }
+
+    .detail-title {
+        margin: 3rem 3rem 0 3rem;    
+    }
+
+    .detail-title_title {
+        font-size: 2rem;
+    }
+
+    .review {
+        margin: 0 3rem 3rem 3rem;
     }
 }
