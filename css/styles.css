@@ -114,11 +114,51 @@ a:active {
     border-radius: 0.2rem;
 }
 
+.review-title {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.review-title_title {
+    grid-column: span 2;
+}
+
+.card-title {
+    padding: 2.5rem 3rem 0 3rem;
+}
+
+.review-title_stars {
+    display: none;
+    padding: 2.5rem 3rem 0 3rem;    
+}
+
+.stars {
+    background-image: url('../assets/stars.svg');
+    background-position: center;
+    background-size: cover;
+    height: 1rem;
+    width: 8rem;  
+}
+
 /*DETAIL SECTION*/
 /*------------------------*/
 
 /*------------------------*/
 /*Media queries*/
+
+@media (min-width: 54rem) {
+    .review-title_title {        
+        grid-column: span 1;
+    }
+    
+    .review-title_stars {
+        display: flex;
+        align-items: center;       
+        justify-content: flex-end; 
+        margin-right: 5rem;
+    }
+}
 
 @media (min-width: 35rem) {
     .hide-link {
