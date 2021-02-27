@@ -75,7 +75,7 @@ a:active {
     background-size: cover;    
     background-color: #231239;
     position: relative;
-    height: 100vh;
+    height: 50rem;
 }
 
 .background-title {
@@ -164,7 +164,7 @@ a:active {
 
 .card-status {
     text-align: center;
-    margin-left: 1.5rem;
+    margin: 0 auto;
 }
 
 .card-status-title {
@@ -187,6 +187,28 @@ a:active {
     margin: 1.5rem 1rem;
     font-weight: 600;
 }
+
+.action {
+    margin: 1rem 0;    
+}
+
+.btn-submit {
+    padding: 1rem;
+    color: #fff;
+    background-color: #FA6E3D;
+    border-radius: 0.5rem;
+    border: none;
+    width: 100%;
+    padding: 1rem 3rem;
+    outline: none;
+}
+
+.btn-submit:hover,
+.btn-submit:active {
+    cursor: pointer;    
+    background-color: #ee9271;
+}
+
 
 /*DETAIL SECTION*/
 /*------------------------*/
@@ -224,10 +246,6 @@ a:active {
 
     .background-title {
         font-size: 5rem;
-    }
-
-    .background {
-        height: 100%;
     }
 
     .detail-title {
